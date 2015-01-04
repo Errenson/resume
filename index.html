@@ -1,0 +1,183 @@
+<meta charset="UTF-8" />
+<link href='http://fonts.googleapis.com/css?family=Alegreya+SC:700,400italic' rel='stylesheet' type='text/css' />
+
+<ul class="htab">
+    <li id="t1" class="show"><a>Erren</a>
+        <div>
+            <p>23 years old</p>
+            <p>Full Stack Developer</p>
+            <p>1 year experience</p>
+        </div>
+    </li>
+    <li id="t2"><a>Work</a>
+        <div>
+            <p>2014.06 ~ ?, - <strong>Full Stack Developer</strong>
+                <br>· Building a writing app with Koa.js,currently rewriting it in Clojure.</p>
+            <p>2013.09 ~ 2014.05, SainStore - <strong>Frontend Developer</strong>
+                <br>· Changed the UI of company's ERP website from EasyUI to Bootstrap,by directly modify EasyUI’s source code.
+                <br>· Built a naive sales report app with node.js and mongoDB.</p>
+            <p>2013.08 ~ 2013.09, MStar Semiconductor - <strong>Embedded Developer</strong>
+                <br>· Modify the C program in the set-top box to fix the bug or suit the manufacturer’s need.</p>
+        </div>
+    </li>
+    <li id="t3"><a>Skill</a>
+        <div>
+            <p><strong>Frontend :</strong> HTML5,CSS3,Vanilla JavaScript(ES6)</p>
+            <p><strong>Backend :</strong> Node.js,Clojure</p>
+            <p><strong>Style :</strong> Functional Programming</p>
+            <p><strong>Tool :</strong> Mac,Sublime,Emacs,Git</p>
+        </div>
+    </li>
+    <li id="t4"><a>Education</a>
+        <div>
+            <p>· Drop out of college with No Regrets.</p>
+            <p>· Started learning Programming in April 2013.</p>
+            <p>· Was learning Philosophy,Economy and Psychology</p>
+        </div>
+    </li>
+    <li id="t5"><a>Contact</a>
+        <div>
+            <p><strong>TEL : </strong>13657831165
+            </p>
+            <p><strong>Email : </strong>e.errenson@gmail.com
+            </p>
+            <p><strong>CN Name : </strong> 姜宁</p>
+            <p><strong>Blog : </strong><a href="http://errenson.github.io/">errenson.github.io</a>
+            </p>
+        </div>
+    </li>
+</ul>
+
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Cambria, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(38, 177, 182, 0.9);
+}
+a {
+    color: #333;
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+p {
+    margin: 3vh 0;
+    padding: 0;
+}
+.htab {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+.htab>li {
+    width: 30%;
+    font-size: 2vw;
+}
+.htab li>a {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 2vw;
+    position: relative;
+    z-index: 2;
+    height: 20%;
+    border-right: 1px solid #fff;
+    font-size: 280%;
+    font-family: 'Alegreya SC', Georgia, serif;
+    transition: color 0.3s ease-in-out;
+}
+.htab li div {
+    height: 100%;
+    width: 70%;
+    padding: 0 20px;
+    color: #fff;
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    transition: left 0.3s ease-in-out, opacity 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+strong {
+    font-size: 140%;
+}
+#t1 p {
+    font-size: 3.5vw;
+    text-align: center;
+}
+#t2 div {
+    font-size: 1.7vw;
+}
+#t3 div {
+    padding: 10vmin;
+}
+#t4 {
+    text-align: center;
+}
+#t5 div {
+    padding: 15vmin;
+}
+p a,
+.htab li.show a {
+    color: #fff;
+}
+.htab li.show div {
+    left: 30%;
+    opacity: 1;
+}
+</style>
+
+<script>
+$each = function(array, callback, scope) {
+    for (var i = 0; i < array.length; i++) {
+        callback.call(scope, array[i], i)
+    }
+}
+$index = function(a, b) {
+    return Array.prototype.indexOf.call(a, b)
+}
+$ = function(s) {
+    return document.querySelector(s)
+}
+$$ = function(s) {
+    return document.querySelectorAll(s)
+}
+$ca = function(a, b) {
+    a.classList.add(b)
+}
+$crSelf = function(a) {
+    $('.' + a).classList.remove(a)
+}
+
+lia = $$('li>a')
+lis = $$('.htab li')
+color = ['rgba(38, 177, 182, 0.9)', 'rgba(174, 54, 55, 0.9', 'rgba(156, 68, 182, 0.9)', 'rgba(18, 157, 231, 0.9', 'rgba(165, 220, 67, 0.9)']
+$each(lia, function(a) {
+    a.onmouseover = function(e) {
+        li = this.parentElement
+        $crSelf('show')
+        $ca(li, 'show')
+        document.body.style.backgroundColor = color[$index(lis, li)]
+    }
+})
+onclick = function(e) {
+    if (e.target.parentElement.nodeName == 'LI') {
+        var next = $('.show').nextElementSibling || $('li')
+        $crSelf('show')
+        $ca(next, 'show')
+        document.body.style.backgroundColor = color[$index(lis, next)]
+    }
+}
+</script>
