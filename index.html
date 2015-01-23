@@ -4,47 +4,43 @@
 <ul class="htab">
     <li id="t1" class="show"><a>Erren</a>
         <div>
-            <p>23 years old</p>
             <p>Full Stack Developer</p>
-            <p>1 year work experience</p>
-        </div>
-    </li>
-    <li id="t2"><a>Work</a>
-        <div>
-            <p><strong> 2014.06 ~ Current</strong>
-                <br>· Building a personal writing app.Originally using Vanilla JS and Koa.js,currently rewriting it with React.js and Clojure.</p>
-            <p><strong> 2013.09 ~ 2014.05 </strong> SainStore - Frontend Developer
-                <br>· Changed the UI of company's ERP app from EasyUI to Bootstrap,by modify EasyUI’s source code.
-                <br>· Built a sales report app with node.js and mongoDB.</p>
-            <p><strong> 2013.08 ~ 2013.09 </strong> MStar Semiconductor - Embedded Software Developer
-                <br>· Modify and debug Set-top box programs written in C.</p>
+            <p>1 year experience</p>
+            <p>23 years old</p>
         </div>
     </li>
     <li id="t3"><a>Skill</a>
         <div>
-            <p><strong>Frontend :</strong> HTML5,CSS3,ES6,React.js</p>
-            <p><strong>Backend :</strong> Node.js,Clojure</p>
-            <p><strong>Style :</strong> Functional Programming</p>
-            <p><strong>Tool :</strong> Mac,Sublime,Emacs,Git</p>
+            <p><strong> HTML5,ES6,React.js</strong></p>
+            <p><strong>Node.js,Clojure</strong></p>
+            <p><strong>Mac,Emacs</strong></p>
         </div>
     </li>
-    <li id="t4"><a>Education</a>
+        <li id="t2"><a>Work</a>
         <div>
-            <p>· Avid reader and self learner</p>
-            <p>· Drop out of college with no regrets</p>
-            <p>· Started learning Programming in April 2013</p>
-            <p>· Interested in topics like Psychology,GTD,Startup </p>
+            <span><strong> 2014.06 ~ Current </strong> @home</span>
+                <p> Building a personal writing app.Originally using Vanilla JS and Koa.js,currently rewriting it with React.js and Clojure.</p>
+                <hr>
+            <span><strong> 2013.09 ~ 2014.06 </strong> @SainStore - Frontend Developer</span>
+                <p> Modified EasyUI’s source code to make it look like Bootstrap.
+                Also built a sales report app with node.js and mongoDB.</p>
+                <hr>
+            <span><strong> 2013.08 ~ 2013.09 </strong> @MStar Semiconductor - Embedded Software Developer</span>
+                <p> Modify and debug Set-top box programs written in C.</p>
+        </div>
+    </li>
+    <li id="t4"><a>Learn</a>
+        <div>
+            <p>Avid reader</p>
+            <p>College dropout</p>
+            <p>#psychology #productivity #startups</p>
         </div>
     </li>
     <li id="t5"><a>Contact</a>
         <div>
-            <p><strong>TEL : </strong>13657831165
-            </p>
-            <p><strong>Email : </strong>e.errenson@gmail.com
-            </p>
-            <p><strong>CN Name : </strong> 姜宁</p>
-            <p><strong>Blog : </strong><a href="http://errenson.github.io/">errenson.github.io</a>
-            </p>
+            <p><strong>姜宁</strong></p>
+            <p><strong>13657831165</strong></p>
+            <p><strong><a href="http://errenson.github.io/">errenson.github.io</a></strong></p>
         </div>
     </li>
 </ul>
@@ -60,6 +56,7 @@ body {
     display: flex;
     justify-content: center;
     background-color: rgba(38, 177, 182, 0.9);
+    text-align: center;
 }
 a {
     color: #333;
@@ -116,19 +113,20 @@ strong {
 }
 #t1 p {
     font-size: 3.5vw;
-    text-align: center;
 }
 #t2 div {
     font-size: 1.7vw;
+    text-align: left;
 }
 #t3 div {
     padding: 10vmin;
 }
-#t4 {
-    text-align: center;
-}
 #t5 div {
     padding: 15vmin;
+}
+#t3 strong, 
+#t5 strong {
+    vertical-align: middle;
 }
 p a,
 .htab li.show a {
@@ -137,6 +135,13 @@ p a,
 .htab li.show div {
     left: 30%;
     opacity: 1;
+}
+hr {
+  width: 95%; 
+  height: 1px;
+  margin: 2vmin 0;
+  border: none; 
+  background: #fff;
 }
 </style>
 
@@ -164,7 +169,7 @@ $crSelf = function(a) {
 
 lia = $$('li>a')
 lis = $$('.htab li')
-color = ['rgba(38, 177, 182, 0.9)', 'rgba(174, 54, 55, 0.9', 'rgba(156, 68, 182, 0.9)', 'rgba(18, 157, 231, 0.9', 'rgba(165, 220, 67, 0.9)']
+color = ['rgba(38, 177, 182, 0.9)','rgba(156, 68, 182, 0.9)', 'rgba(174, 54, 55, 0.9', 'rgba(18, 157, 231, 0.9', 'rgba(165, 220, 67, 0.9)']
 $each(lia, function(a) {
     a.onmouseover = function(e) {
         li = this.parentElement
