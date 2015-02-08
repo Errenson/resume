@@ -9,14 +9,21 @@
             <p>23 years old</p>
         </div>
     </li>
-    <li id="t3"><a>Skill</a>
+    <li id="t2"><a>Skill</a>
         <div>
             <p><strong> HTML5,ES6,React.js</strong></p>
             <p><strong>Node.js,Clojure</strong></p>
             <p><strong>Mac,Emacs</strong></p>
         </div>
     </li>
-        <li id="t2"><a>Work</a>
+    <li id="t3"><a>Edu</a>
+        <div>
+            <p>College dropout</p>
+            <p>Avid reader&Self learner</p>
+            <p>#psychology #productivity #tech</p>
+        </div>
+    </li>
+        <li id="t4"><a>Work</a>
         <div>
             <span><strong> 2014.06 ~ 2014.02 </strong> @home</span>
                 <p> Built a personal writing app using Vanilla JS and Koa.js.</p>
@@ -29,13 +36,7 @@
                 <p> Modify and debug Set-top box programs written in C.</p>
         </div>
     </li>
-    <li id="t4"><a>Learn</a>
-        <div>
-            <p>College dropout</p>
-            <p>Avid reader&Self learner</p>
-            <p>#psychology #productivity #tech</p>
-        </div>
-    </li>
+
     <li id="t5"><a>Contact</a>
         <div>
             <p><strong>姜宁</strong></p>
@@ -115,7 +116,7 @@ strong {
 #t1 p {
     font-size: 3.5vw;
 }
-#t2 div {
+#t4 div {
     font-size: 1.7vw;
     text-align: left;
 }
@@ -124,10 +125,6 @@ strong {
 }
 #t5 div {
     padding: 15vmin;
-}
-#t3 strong, 
-#t5 strong {
-    vertical-align: middle;
 }
 p a,
 .htab li.show a {
@@ -170,7 +167,7 @@ $crSelf = function(a) {
 
 lia = $$('li>a')
 lis = $$('.htab li')
-color = ['rgba(38, 177, 182, 0.9)','rgba(156, 68, 182, 0.9)', 'rgba(174, 54, 55, 0.9', 'rgba(18, 157, 231, 0.9', 'rgba(165, 220, 67, 0.9)']
+color = ['rgba(38, 177, 182, 0.9)','rgba(156, 68, 182, 0.9)','rgba(18, 157, 231, 0.9','rgba(174, 54, 55, 0.9','rgba(165, 220, 67, 0.9)']
 $each(lia, function(a) {
     a.onmouseover = function(e) {
         li = this.parentElement
